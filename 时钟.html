@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w{
+            
+			width: 500px;
+			height: 500px;
+			border: 1px solid gold;
+			border-radius: 50%;
+			margin: 100px auto;
+            position: relative;
+        }
+        #s{
+            width: 10px;
+            height: 100px;
+            background: gold;
+            position: absolute;
+            left: 250px;
+            top: 150px;
+            transform-origin: bottom center;
+            /* transform: rotateZ(-90DEG); */
+        }
+        #f{
+            width: 10px;
+            height: 150px;
+            background: rgb(35, 10, 179);
+            position: absolute;
+            left: 250px;
+            top: 100px;
+            transform-origin: bottom center;
+            /* transform: rotateZ(-90DEG); */
+        }
+        #m{
+            width: 10px;
+            height: 200px;
+            background: rgb(255, 0, 0);
+            position: absolute;
+            left: 250px;
+            top: 50px;
+            transform-origin: bottom center;
+            /* transform: rotateZ(-90DEG); */
+        }
+        .shier{
+            position: absolute;
+            left: 235px;
+        }
+        .san{
+            position: absolute;
+            left: 450px;
+            top: 210px;
+        }
+        .liu{
+            position: absolute;
+            left: 250px;
+            top: 425px;
+        }
+        .jiu{
+            position: absolute;
+            left: 25px;
+            top: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w">
+        <div id="m"></div>
+        <div id="f"></div>
+        <div id="s"></div>
+        <div>
+            <h1 class="shier">12</h1>
+            <h1 class="san">3</h1>
+            <h1 class="liu">6</h1>
+            <h1 class="jiu">9</h1>
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function clock(){
+        var date = new Date();
+            s.style.transform ='rotate(' +(date.getHours()*30)+'deg)';
+            f.style.transform ='rotate(' +(date.getMinutes()*6)+'deg)';
+            m.style.transform ='rotate(' +(date.getSeconds()*6)+'deg)';
+    }
+    clock();
+    setInterval(clock,1000);
+</script>
